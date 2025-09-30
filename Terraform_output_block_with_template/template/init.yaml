@@ -1,0 +1,12 @@
+steps:
+        - task: TerraformTask@5
+          inputs:
+            provider: 'azurerm'
+            command: 'init'
+            workingDirectory: '$(System.DefaultWorkingDirectory)/parent/dev'
+            backendServiceArm: 'kaka'
+            backendAzureRmOverrideSubscriptionID: '787c86fa-2cad-40aa-8646-4356806d5a43'
+            backendAzureRmResourceGroupName: 'updeshrg'
+            backendAzureRmStorageAccountName: 'updeshstorage'
+            backendAzureRmContainerName: 'updeshcon'
+            backendAzureRmKey: 'output.tfstatefile'
